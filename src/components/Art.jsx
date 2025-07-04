@@ -71,7 +71,7 @@ const Art = () => {
                 </div>
                 <div className="masked-container">
                     <h2 className="will-fade">Une perfection liquide</h2>
-                    <div>
+                    <div className="">
                         <h3>Fait avec passion</h3>
                         <p>Plus qu'un cocktail, un moment inoubliable.</p>
                     </div>
