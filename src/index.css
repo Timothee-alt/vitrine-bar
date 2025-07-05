@@ -243,7 +243,7 @@ body {
         @apply flex-center flex-col min-h-dvh p-5 mt-20 relative radial-gradient;
 
         h2 {
-            @apply relative md:text-[20vw] text-8xl text-nowrap leading-none font-modern-negra text-center text-[#505050] mb-8;
+            @apply relative md:text-[20vw] text-6xl text-nowrap leading-none font-modern-negra text-center text-[#505050] mb-8;
         }
 
         .content {
@@ -256,7 +256,7 @@ body {
 
         .masked-container {
             h2 {
-                @apply text-4xl md:text-5xl font-modern-negra text-center mb-10 text-white mt-32;
+                @apply text-2xl md:text-5xl font-modern-negra text-center mb-10 text-white mt-32;
             }
 
             div {
@@ -285,7 +285,7 @@ body {
         }
 
         .cocktail-tabs {
-            @apply grid md:grid-cols-4 grid-cols-2 md:gap-20 gap-10 sm:mb-32 mb-20 relative z-10 md:max-w-6xl md:mx-auto;
+            @apply grid md:grid-cols-4 grid-cols-2 md:gap-20 gap-10 sm:mb-32 mb-20 relative z-10 md:max-w-6xl md:mx-auto ;
 
             button {
                 @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-modern-negra;

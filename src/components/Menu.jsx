@@ -12,7 +12,6 @@ const Menu = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useGSAP(() => {
-        // Create a timeline for better control and cleanup
         const tl = gsap.timeline();
 
         tl.fromTo('#title', {opacity: 0}, {opacity: 1, duration: 1})
@@ -23,7 +22,6 @@ const Menu = () => {
           .fromTo('.details p', {yPercent: 100, opacity: 0},
               {yPercent: 0, opacity: 1, ease: 'power1.inOut'}, "<0.1");
 
-        // Return cleanup function
         return () => {
             tl.kill();
         };
@@ -53,12 +51,12 @@ const Menu = () => {
                 Menu des cocktails
             </h2>
 
-            <nav className="cocktail-tabs" aria-label="Cocktail Navigation">
+            <nav className="cocktail-tabs " aria-label="Cocktail Navigation">
                 {sliderLists.map((cocktail, index) => {
                     const isActive = index === currentIndex;
 
                     return (
-                        <button key={cocktail.id} className={`${isActive ? 'text-white border-white' : 'text-white/50 border-white/50'}`}
+                        <button key={cocktail.id} className={`${isActive ? 'text-yellow border-yellow hover:text-yellow transition-colors duration-700' : 'text-white/50 border-white/50 hover:text-yellow hover:border-yellow transition-colors duration-700'}`}
                         onClick={() => goToSlide(index)}
                         >
                             {cocktail.name}

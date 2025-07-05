@@ -46,7 +46,7 @@ const About = () => {
                         </p>
                         <div>
                             <p className="md:text-3xl text-5xl font-bold">
-                                <span className="text-white">4.5/</span><span>5</span>
+                                <span className="text-white">4.5</span><span>/</span><span className="text-white">5</span>
                             </p>
                             <p className="text-sm text-white-100">
                                 Plus de 1200 clients

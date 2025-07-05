@@ -43,19 +43,19 @@ const Contact = () => {
             <img src="/images/footer-left-leaf.png" alt="leaf-left" id ="f-left-leaf" />
 
             <div className="content">
-                <h2>Où nous trouver</h2>
+                <h2 className="text-yellow">Où nous trouver</h2>
 
                 <div>
-                    <h3>Visiter notre bar</h3>
+                    <h3 className="text-yellow">Visiter notre bar</h3>
                     <p>26, rue Kerampont, Lannion</p>
                 </div>
                 <div>
-                    <h3>Nous contacter</h3>
+                    <h3 className="text-yellow">Nous contacter</h3>
                     <p>06.00.00.00.00</p>
                     <p>sunnylounge@cocktail.com</p>
                 </div>
                 <div>
-                    <h3>Ouvert tous les jours</h3>
+                    <h3 className="text-yellow">Ouvert tous les jours</h3>
                     {openingHours.map((time) => (
                         <p key={time.day}>
                             {time.day} : {time.time}
@@ -63,7 +63,7 @@ const Contact = () => {
                     ))}
                 </div>
                 <div>
-                    <h3>Nos réseaux</h3>
+                    <h3 className="text-yellow">Nos réseaux</h3>
 
                     <div className="flex-center gap-5">
                         {socials.map((social) => (
