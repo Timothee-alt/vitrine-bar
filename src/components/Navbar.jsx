@@ -21,14 +21,21 @@ const Navbar = () => {
         <nav>
             <div>
                 <a href="#home" className="flex items-center gap-2">
-                    <img src="/images/logo.png" alt="logo" />
-                    <p>Sunny Lounge</p>
+                    <p className="hover:text-yellow transition-colors duration-700">Sunny Lounge</p>
                 </a>
 
-                <ul>
+                <ul >
                     {navLinks.map((link) => (
-                        <li key={link.id}>
-                            <a href={`#${link.id}`}>{link.title}</a>
+                        <li
+                            key={link.id}
+                            className="group relative transition-colors duration-700"
+                        >
+                            <a
+                                href={`#${link.id}`}
+                                className="group-hover:text-yellow relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-yellow after:scale-x-0 after:origin-left after:transition-transform after:duration-500 group-hover:after:scale-x-100 after:rounded-full"
+                            >
+                                {link.title}
+                            </a>
                         </li>
                     ))}
                 </ul>

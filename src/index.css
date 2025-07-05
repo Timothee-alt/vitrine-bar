@@ -45,7 +45,7 @@ body {
 
 @utility radial-gradient {
     background: radial-gradient(
-            circle at center,
+            60vh 60vh at center,
             #434343 0%,
             #000 50%,
             transparent 100%
@@ -56,7 +56,7 @@ body {
     mask-image: url("/images/mask-img.png");
     mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: 50%;
+    mask-size: 20%;
 }
 
 @layer components {
@@ -193,7 +193,6 @@ body {
             h2 {
                 @apply text-5xl md:text-6xl font-modern-negra max-w-lg;
             }
-
             .sub-content {
                 @apply md:col-span-4 space-y-5 flex flex-col justify-between;
 
@@ -248,11 +247,11 @@ body {
         }
 
         .content {
-            @apply flex md:flex-row flex-col justify-between md:mb-16 md:mt-0 mt-40 gap-10;
+            @apply flex md:flex-row flex-col justify-between md:mb-16 md:mt-0 mt-10 gap-10;
         }
 
         .cocktail-img {
-            @apply md:w-[60vw] w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden absolute top-0 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2;
+            @apply md:w-[60vw] w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden absolute top-40 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2;
         }
 
         .masked-container {
@@ -275,7 +274,7 @@ body {
     }
 
     #menu {
-        @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient;
+        @apply relative w-full md:mt-10 mt-0 2xl:px-0 px-5 py-20 radial-gradient;
 
         #m-left-leaf {
             @apply object-contain absolute -bottom-20 left-0 md:w-fit w-1/3;

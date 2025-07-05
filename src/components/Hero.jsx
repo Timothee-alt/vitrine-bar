@@ -77,7 +77,7 @@ const Hero = () => {
             <div className="body">
                 <div className="content">
                     <div className="space-y-5 hidden md:block">
-                        <p>Cool. Classe. Artistique.</p>
+                        <p className="subtitle">Cool. Classe. Artistique.</p>
                         <p className="subtitle">
                             Goûter à l'esprit <br />de l'été
                         </p>
@@ -86,7 +86,7 @@ const Hero = () => {
                         <p className="subtitle">
                             Embarquez pour un voyage sensoriel à travers notre carte de cocktails artisanaux, élaborés avec passion pour transformer chaque instant en célébration.
                         </p>
-                        <a href="#cocktails">Voir les cocktails</a>
+                        <a className="subtitle" href="#cocktails">Voir les cocktails</a>
                     </div>
                 </div>
             </div>

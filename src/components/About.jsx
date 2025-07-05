@@ -45,8 +45,8 @@ const About = () => {
                             pour faire de chaque verre un moment mémorable
                         </p>
                         <div>
-                            <p className="md:text-3xl text-xl font-bold">
-                                <span>4.5</span>
+                            <p className="md:text-3xl text-5xl font-bold">
+                                <span className="text-white">4.5/</span><span>5</span>
                             </p>
                             <p className="text-sm text-white-100">
                                 Plus de 1200 clients
