@@ -197,7 +197,7 @@ body {
                 @apply md:col-span-4 space-y-5 flex flex-col justify-between;
 
                 p {
-                    @apply text-lg;
+                    @apply text-lg block overflow-hidden leading-relaxed;
                 }
 
                 div {

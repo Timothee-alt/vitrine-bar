@@ -8,13 +8,23 @@ const About = () => {
             type: 'words'
         })
 
+        const splitLines = SplitText.create('.sub-content p:first-of-type', {
+            type: 'lines'
+        })
+
         const scrollTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: '#about',
                 start: 'top center'
             }
         })
-
+        scrollTimeline.from(splitLines.lines, {
+            opacity: 0,
+            duration: 1,
+            yPercent: 100,
+            ease: 'expo.out',
+            stagger: 0.02
+        })
         scrollTimeline.from(titleSplit.words, {
             opacity: 0,
             duration: 1,
@@ -35,7 +45,7 @@ const About = () => {
                 <div className="content">
                    <div className="md:col-span-8">
                         <p className="badge">Les meilleurs cocktails</p>
-                        <h2>Où chaque détails comptent <span className="text-white">-</span>
+                        <h2>Où chaque détails comptent -
                         du début à la fin
                         </h2>
                    </div>
