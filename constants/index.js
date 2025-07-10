@@ -28,19 +28,19 @@ const cocktailLists = [
         name: "Caten Malbee",
         country: "AU",
         detail: "Battle",
-        price: "49 €",
+        price: "12 €",
     },
     {
         name: "Rhino Pale Ale",
         country: "CA",
         detail: "750 ml",
-        price: "20 €",
+        price: "12 €",
     },
     {
         name: "Irish Guinness",
         country: "IE",
         detail: "600 ml",
-        price: "29 €",
+        price: "15 €",
     },
 ];
 
@@ -55,19 +55,19 @@ const mockTailLists = [
         name: "Fruitpassion Menthe",
         country: "US",
         detail: "Battle",
-        price: "49 €",
+        price: "11 €",
     },
     {
         name: "Citrus Glow",
         country: "CA",
         detail: "750 ml",
-        price: "20 €",
+        price: "11 €",
     },
     {
         name: "Lavender Fizz",
         country: "IE",
         detail: "600 ml",
-        price: "29 €",
+        price: "12 €",
     },
 ];
 
