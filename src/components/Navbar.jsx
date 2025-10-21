@@ -31,13 +31,13 @@ const Navbar = () => {
 
     return (
         <nav>
-            <div>
+            <div className="flex items-center justify-between lg:ml-8 relative">
                 <a href="#home" className="flex items-center gap-2">
                     <p className="hover:text-yellow transition-colors duration-700">Sunny Lounge</p>
                 </a>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex">
+                <ul className="hidden md:flex lg:mr-22">
                     {navLinks.map((link) => (
                         <li
                             key={link.id}
@@ -55,7 +55,7 @@ const Navbar = () => {
 
                 {/* Hamburger Menu Button */}
                 <button
-                    className="md:hidden flex flex-col gap-1.5 z-50"
+                    className="md:hidden absolute right-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 z-50"
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
