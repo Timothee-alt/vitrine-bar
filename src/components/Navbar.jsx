@@ -1,8 +1,11 @@
 import {navLinks} from '../../constants/index.js';
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
+import {useState} from "react";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     useGSAP(() => {
         const navTween = gsap.timeline({
             scrollTrigger: {
@@ -17,6 +20,15 @@ const Navbar = () => {
                 ease: 'power1.out',
         });
     })
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <nav>
             <div>
@@ -24,7 +36,8 @@ const Navbar = () => {
                     <p className="hover:text-yellow transition-colors duration-700">Sunny Lounge</p>
                 </a>
 
-                <ul >
+                {/* Desktop Menu */}
+                <ul className="hidden md:flex">
                     {navLinks.map((link) => (
                         <li
                             key={link.id}
@@ -39,7 +52,38 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
+
+                {/* Hamburger Menu Button */}
+                <button
+                    className="md:hidden flex flex-col gap-1.5 z-50"
+                    onClick={toggleMenu}
+                    aria-label="Toggle menu"
+                >
+                    <span className={`block w-6 h-0.5 bg-yellow transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                    <span className={`block w-6 h-0.5 bg-yellow transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+                    <span className={`block w-6 h-0.5 bg-yellow transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                </button>
             </div>
+
+            {/* Mobile Menu */}
+            {isMenuOpen && (
+                <ul className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-b border-white/10 flex flex-col gap-0">
+                    {navLinks.map((link) => (
+                        <li
+                            key={link.id}
+                            className="border-b border-white/5 last:border-b-0"
+                        >
+                            <a
+                                href={`#${link.id}`}
+                                onClick={closeMenu}
+                                className="block px-5 py-3 text-sm hover:text-yellow transition-colors duration-300"
+                            >
+                                {link.title}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            )}
         </nav>
     )
 }

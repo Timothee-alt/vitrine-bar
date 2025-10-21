@@ -57,10 +57,10 @@ const Hero = () => {
                 start: startValue,
                 end: endValue,
                 scrub: true,
-                pin: true,
+                pin: !isMobile,
             }
         });
-    }, []);
+    }, [isMobile]);
     return (
     <>
         <section id='hero' className='noisy'>
@@ -98,7 +98,7 @@ const Hero = () => {
             src="/videos/output.mp4"
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
             />
         </div>
     </>
